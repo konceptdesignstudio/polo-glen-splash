@@ -1,0 +1,75 @@
++border-box-sizing
+
+html, body
+  height: 100%
+
+body
+  font-size: 15px
+  line-height: 24px
+  -webkit-font-smoothing: antialiased
+  font-smoothing: antialiased
+  font-family: $font-family
+
+h1,h2,h3,h4
+  font-family: 'Oswald', sans-serif
+
+h1 
+
+h2 
+
+h3
+
+h4
+
+p
+
+img
+  max-width: 100%
+  height: auto
+
+a
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+
+strong
+  font-weight: bold
+
+ul
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+input, textarea, input[type="text"], input[type="submit"]
+  &:focus
+    outline: 0
+
+.hidden
+  display: none
+
+//Layout
+.container
+  +container($total-columns)
+
+article
+  +span-columns(9 omega, $total-columns)
+  .blog &, .single-post &
+    +span-columns(8 omega, $total-columns)
+
+aside
+  +span-columns(3, $total-columns)
+  .blog &, .single-post &
+    +span-columns(4 omega, $total-columns)
+
+.alignright
+  float: right
+  margin: 0 0 10px 10px
+
+.alignleft
+  float: left
+  margin: 0 10px 10px 0
+
+.aligncenter
+  margin: 10px auto
+
+#main-content
